@@ -1,0 +1,381 @@
+<!-- This document type definition (DTD) models the Naval Surface Warfare, 
+Carderock Division, Ship Systems Engineering Station (NSWCCD-SSES) 
+Engineering Operational Sequencing System (EOSS) document class. It is 
+invoked by the document type declaration
+
+<!DOCTYPE doceoss PUBLIC "-//USA-DOD//DTD FOR NSWCCD-SSES EOSS DOCUMENTS 980721//EN">
+
+This DTD is an enhancement of the 970305 EOSS DTD which makes provision for a
+hyperlinking capability between SGML text and CGM4 graphics through the 
+"dialink" element type.
+
+For information regarding the EOSS Program and the DTD's availability, contact
+either of:
+
+        Mr. James Grugan                     Mr. Nang Tran  
+        215-897-1046                         215-897-1393
+        grugan08@mailgate.navsses.navy.mil   tran@mailgate.navsses.navy.mil
+at
+        NSWCCD-SSES Code 134
+        Philadelphia, PA 19112.
+        
+This DTD was written for NSWCCD-SSES by the Technology Implementation Support
+Team of the Naval Surface Warfare Center, Carderock Division, David Taylor 
+Model Basin. For information regarding the DTD's application and use, contact
+either of:
+
+        Ms. Lori Westbrook       Mr. Donald Gignac
+        VOICE: 301-227-3346      VOICE: 301-227-3348
+        FAX: 301-227-3343        FAX: 301-227-3343
+        westbroo@dt.navy.mil     gignac@dt.navy.mil
+at 
+        NSWCCD-DTMB Code 2053               
+        9500 MacArthur Boulevard
+        West Bethesda, MD 20817-5000.        
+
+The 19 subclasses of EOSS documents and their acronyms are: 
+
+        1. Component Procedure (CP)
+        2. Master Procedure (MPP)
+        3. Master Procedure Landscape (MPL)     
+        4. Operational Procedure (OP)
+        5. Operational Procedure Landscape (OPL) 
+        6. System Procedure (SP)
+        7. System Procedure Landscape (SPL)
+        8. System Control Procedure (SCP)
+        9. Fuel Control Procedure (FCP)
+       10. Valve Table (VT)
+       11. Valve Table Landscape (VTL)
+       12. Standard Notes (SN)
+       13. Standard Warning (SW)
+       14. Casualty Response Procedure (CRP)
+       15. Master Casualty Response Procedure (MCR) 
+       16. Emergency Procedure (EP)
+       17. Master Emergency Procedure (ME)
+       18. Master Emergency Plant Procedure (MEP)
+       19. Diagram (DIA)
+
+More detailed information regarding these subclasses is contained in the 
+documentation that will be provided with the DTD. -->
+
+<!-- EOSS Root Element -->
+<!ELEMENT doceoss  - -  (cp | mpp | mpl | op | opl | sp | spl | scp | fcp |
+                         vt | vtl | sn | sw | crp | mcr | ep | me | mep | dia)
+                       +(warning | warnings | caution | cautions | note | 
+                          notes | verbatim)>
+
+<!-- EOSS DOCUMENT SUBCLASSES -->
+<!-- Component Procedure (CP) -->
+<!ELEMENT cp  - -  (prtitle, pubno, cpdes, procarea)>
+
+<!-- Master Procedure (MPP) / Master Procedure Landscape (MPL) -->
+<!ELEMENT (mpp | mpl)  - -  (prtitle, pubno, notearea, (usernotes | doneproc))>
+
+<!-- Operational Procedure (OP) / Operational Procedure Landscape (OPL) -->
+<!ELEMENT (op | opl)  - -  (prtitle, pubno, watcharea, notearea, usernotes)>
+
+<!-- System Procedure (SP) / System Procedure Landscape (SPL)-->
+<!ELEMENT (sp | spl)  - -  (prtitle, pubno, procarea, usernotes?)>
+
+<!-- System Control Procedure (SCP) -->
+<!ELEMENT scp  - -  (prtitle, pubno, notearea, doneproc)>
+
+<!-- Fuel Control Procedure (FCP) -->
+<!ELEMENT fcp  - -  (prtitle, pubno, notearea, (usernotes | doneproc))>
+
+<!-- Valve Table (VT) / Valve Table Landscape (VTL) -->
+<!ELEMENT (vt | vtl)  - -  (prtitle, pubno, table+)>
+
+<!-- CALS List Types -->
+<!ENTITY % list "seqlist | deflist | randlist">
+
+<!-- Standard Notes (SN) -->
+<!ELEMENT sn  - -  (prtitle, pubno, watcharea, (%list;)+)>
+
+<!-- Standard Warning (SW) -->
+<!ELEMENT sw  - -  (prtitle, pubno, warnarea)>
+
+<!-- Casualty Response Procedure (CRP) -->
+<!ELEMENT crp  - -  (prtitle, pubno, watcharea, usernotes)>
+
+<!-- Master Casualty Response Procedure (MCR) -->
+<!ELEMENT mcr  - -  (prtitle, pubno, (%list;)+, usernotes)>
+
+<!-- Emergency Procedure (EP) -->
+<!ELEMENT ep  - -  (prtitle, pubno, watcharea, usernotes)>
+
+<!-- Master Emergency Procedure (ME) -->
+<!ELEMENT me  - -  (prtitle, pubno, (%list;)+, usernotes)>
+
+<!-- Master Emergency Plant Procedure (MEP) -->
+<!ELEMENT mep  - -  (prtitle, pubno, (%list;)*, usernotes)>
+
+<!-- Diagram (DIA) -->
+<!-- NOTE: A "diagram" element has two functions: (1) as a EOSS document
+component consisting of one or more graphics; and (2) as an EOSS document 
+subclass in its own right which consists of one or more graphics. The "dia"
+ELEMENT declaration follows. -->
+<!ELEMENT dia  - -  (graphic+)>
+<!-- The value of the "label" attribute is the mastercode portion of the 
+diagram publication number, e.g., label="DACW". -->
+<!ATTLIST dia  label   CDATA   #REQUIRED> 
+<!-- END OF EOSS DOCUMENT SUBCLASSES -->
+
+<!-- EOSS DOCUMENT IDENTIFICATION INFORMATION -->
+<!-- Publication Number -->
+<!ELEMENT pubno  - -  (mastercode, seqno, pubdate)>
+
+<!-- Master Code / Sequence Number / Publication Date -->
+<!ELEMENT (mastercode | seqno | pubdate)  - -  CDATA>
+
+<!-- Prime Title -->
+<!ELEMENT prtitle  - -  (#PCDATA | subscrpt | supscrpt)+>
+<!-- END OF EOSS DOCUMENT IDENTIFICATION INFORMATION -->
+
+<!-- COMPONENTS OF EOSS DOCUMENTS -->
+
+<!-- Diagram Link (DIALINK) -->
+<!ELEMENT dialink  - -  CDATA>
+<!ATTLIST dialink  ident      CDATA    #IMPLIED
+                   boardno    ENTITY   #REQUIRED
+                   hypdestn   CDATA    #REQUIRED>  
+
+<!-- Component Procedure Description Box -->
+<!ELEMENT cpdes  - -  (topic+)>
+
+<!-- Topic of Component Description Box -->
+<!ELEMENT topic  - -  (#PCDATA | subscrpt | supscrpt)+>
+<!ATTLIST topic  idref   IDREF   #REQUIRED  -- The value of the "idref" 
+attribute is that of the "id" attribute on the corresponding "title" tag -->
+
+<!-- Procedure Area -->
+<!ELEMENT procarea  - -  (para0 | %list;)+>
+
+<!-- Notes Area -->
+<!ELEMENT notearea  - -  (para0 | %list;)*>
+
+<!-- Warning Area -->
+<!ELEMENT warnarea  - -  (para0 | %list;)+>
+
+<!-- Watch Area Box -->
+<!ELEMENT watcharea  - -  CDATA>
+
+<!-- User Notes Section -->
+<!ELEMENT usernotes  - -  (%list;)+>
+
+<!-- Done / Procedure Section -->
+<!ELEMENT doneproc  - -  (%list;)+>
+
+<!-- Negative Text -->
+<!ELEMENT negtext  - -  (#PCDATA)>
+<!-- END OF COMPONENTS OF EOSS DOCUMENTS -->
+
+<!-- COMMONLY USED CALS ELEMENTS (MODIFIED FOR EOSS DOCUMENTS) -->
+<!-- Text Components -->
+<!ENTITY % text "#PCDATA | subscrpt | supscrpt | negtext | emphasis | dia | 
+                 graphic | dialink | change | xref | extref">
+
+<!-- Subscript / Superscript -->
+<!ELEMENT (subscrpt | supscrpt)  - -  CDATA>
+
+<!-- Primary Paragraph -->
+<!ELEMENT para0  - -  (title?, para+)>
+<!ATTLIST para0  id        ID        #IMPLIED
+                 label     CDATA     #IMPLIED>
+
+<!-- Title -->
+<!ELEMENT title  - -  (%text;)+>
+<!ATTLIST title  label  CDATA    #IMPLIED
+                 id     ID       #IMPLIED>
+
+<!-- Paragraph Text (Must Not Contain Lists) --> 
+<!ELEMENT paratext  - -  (%text;)+>
+
+<!-- Untitled Paragraph (Contains Paragraph Text and/or Lists) -->
+<!ELEMENT para  - -  (paratext | %list;)+>
+
+<!-- Special Paragraphs: Warning, Caution, and Note -->
+<!ELEMENT (warning | caution | note)  - -  (paratext | %list;)+>
+<!ATTLIST (warning | caution | note)  id       ID        #IMPLIED
+                                      label    CDATA     #IMPLIED
+                                      xlink    CDATA     #IMPLIED>
+  
+<!-- Warnings Section / Cautions Section / Notes Section -->
+<!ELEMENT (warnings | cautions | notes)  - -  (%list;)+>
+<!ATTLIST (warnings | cautions | notes)  id       ID        #IMPLIED
+                                         label    CDATA     #IMPLIED
+                                         xlink    CDATA     #IMPLIED>
+
+<!-- Sequential List -->
+<!ELEMENT seqlist  - -  (title?, item+)>
+<!ATTLIST seqlist  id          ID                             #IMPLIED
+                   label       CDATA                          #IMPLIED
+                   numstyle    (arabic | arabic-parens | 
+                                romanuc | romanlc | 
+                                alphauc | alphalc | 
+                                alphalc-parens | none)        #IMPLIED>
+
+<!-- Random List -->
+<!ELEMENT randlist  - -  (title?, item+)>
+<!ATTLIST randlist  prefix      CDATA                          #IMPLIED>
+
+<!-- Sequential / Random List Item -->
+<!ELEMENT item  - -  (paratext | %list; | table)+>
+<!ATTLIST item  id           ID                  #IMPLIED
+                label        CDATA               #IMPLIED>
+
+<!-- Definition List -->
+<!ELEMENT deflist  - - (title?, (term, def)+)>
+<!ATTLIST deflist  type  (valve | regular)  "valve">
+<!-- The "type" attribute of the "deflist" element specifies whether the
+definition list is used as a valve list ("valve") or as a general 
+definition list ("regular"). -->
+
+<!-- Term To Be Defined in Definition List -->
+<!ELEMENT term  - -  (%text;)+>
+
+<!-- Definition of Term in Definition List -->
+<!ELEMENT def  - -  (paratext | %list;)+>
+
+<!-- Emphasis -->
+<!ELEMENT emphasis  - -  (%text;)+>
+<!ATTLIST emphasis  type   (bold | underline | valve)   #REQUIRED>
+
+<!-- Verbatim Text (for "anomalies" that can not be conveniently tagged 
+otherwise) -->
+<!ELEMENT verbatim  - -  CDATA>
+
+<!-- Graphic -->
+<!ELEMENT graphic  - o  EMPTY>
+<!ATTLIST graphic  boardno     ENTITY     #REQUIRED
+                   id          ID         #IMPLIED
+                   label       CDATA      #REQUIRED>
+
+<!-- Internal Cross-Reference -->
+<!ELEMENT xref  - O  EMPTY>   
+<!ATTLIST xref  xrefid        IDREF                         #REQUIRED
+                xidtype       (figure | table | text)       #REQUIRED
+                pretext       CDATA                         #IMPLIED
+                posttext      CDATA                         #IMPLIED>
+
+<!-- External Document Reference -->
+<!ELEMENT extref  - o  EMPTY >
+<!ATTLIST extref  docno        CDATA       #IMPLIED 
+                  pretext      CDATA       #IMPLIED
+                  posttext     CDATA       #IMPLIED>
+<!-- END OF COMMONLY USED CALS ELEMENTS (MODIFIED FOR EOSS DOCUMENTS) -->
+
+<!ENTITY % yesorno "NUMBER" >
+
+<!-- Change Information (Used to Provide Change Bars) -->
+<!ELEMENT change  - -  (%text;)+>
+<!ATTLIST change  id          ID                 #IMPLIED  
+                  change      (add | delete)     #IMPLIED
+                  level       CDATA              #IMPLIED
+                  mark        %yesorno;          #IMPLIED>
+
+<!-- Table / Chart -->
+<!ELEMENT (table | chart)  - -  (title?, tgroup+) -(table | chart)>
+<!ATTLIST (table | chart)  frame       (top | bottom | topbot | 
+                                        all | sides | none)         #IMPLIED
+                           colsep      %yesorno;                    #IMPLIED
+                           rowsep      %yesorno;                    #IMPLIED
+                           orient      (port | land)                #IMPLIED
+                           pgwide      %yesorno;                    #IMPLIED>
+
+<!-- Table Group -->
+<!ELEMENT tgroup  - o  (colspec*, spanspec*, thead?, tfoot?, tbody) >
+<!ATTLIST tgroup  cols          NUMBER                          #REQUIRED
+                  colsep        %yesorno;                       #IMPLIED
+                  rowsep        %yesorno;                       #IMPLIED
+                  align         (left | right | center | 
+                                 justify | char)                "left"
+                  charoff       NUTOKEN                         "50"
+                  char          CDATA                           "">
+
+<!-- Column Specification -->
+<!ELEMENT colspec  - o  EMPTY>
+<!ATTLIST colspec  colnum        NUMBER                         #IMPLIED
+                   colname       NMTOKEN                        #IMPLIED
+                   align         (left | right | center | 
+                                  justify | char)               #IMPLIED
+                   charoff       NUTOKEN                        #IMPLIED
+                   char          CDATA                          #IMPLIED
+                   colwidth      CDATA                          #IMPLIED
+                   colsep        %yesorno;                      #IMPLIED
+                   rowsep        %yesorno;                      #IMPLIED>
+
+<!-- Span Specification -->
+<!ELEMENT spanspec  - o  EMPTY >
+<!ATTLIST spanspec  namest        NMTOKEN                         #REQUIRED
+                    nameend       NMTOKEN                         #REQUIRED
+                    spanname      NMTOKEN                         #REQUIRED
+                    align         (left | right | center |
+                                   justify | char)                "center"
+                    charoff       NUTOKEN                         #IMPLIED
+                    char          CDATA                           #IMPLIED
+                    colsep        %yesorno;                       #IMPLIED
+                    rowsep        %yesorno;                       #IMPLIED>
+
+<!-- Table Head / Table Foot -->
+<!ELEMENT (thead | tfoot)  - o  (colspec*, row+) -(entrytbl) >
+<!ATTLIST thead  valign     (top | middle | bottom)     "bottom">
+<!ATTLIST tfoot  valign     (top | middle | bottom)     "top">
+
+<!-- Table Body -->
+<!ELEMENT tbody  - o  (row+)>
+<!ATTLIST tbody  valign     (top | middle | bottom)     "top">
+
+<!-- Table Row -->
+<!ELEMENT row  - o  (entry | entrytbl)+ >
+<!ATTLIST row  rowsep     %yesorno;     #IMPLIED>
+
+<!-- Table Row Entry / Component Description Box Entry -->
+<!ELEMENT entry  - -  (%text; | %list;)+>
+<!ATTLIST entry  colname       NMTOKEN                         #IMPLIED
+                 namest        NMTOKEN                         #IMPLIED
+                 nameend       NMTOKEN                         #IMPLIED
+                 spanname      NMTOKEN                         #IMPLIED
+                 morerows      NUMBER                          "0"
+                 colsep        %yesorno;                       #IMPLIED
+                 rowsep        %yesorno;                       #IMPLIED
+                 rotate        %yesorno;                       "0"
+                 valign        (top | bottom | middle)         "top"
+                 align         (left | right | center | 
+                                justify | char )               #IMPLIED 
+                 charoff       NUTOKEN                         #IMPLIED
+                 char          CDATA                           #IMPLIED
+                 idref         IDREF                           #IMPLIED>
+
+<!-- Entry Table -->
+<!ELEMENT entrytbl  - -  (colspec*, spanspec*, thead?, tbody)+ -(entrytbl)>
+<!ATTLIST entrytbl  cols         NUMBER                         #REQUIRED
+                    colname      NMTOKEN                        #IMPLIED
+                    spanname     NMTOKEN                        #IMPLIED
+                    colsep       %yesorno;                      #IMPLIED
+                    rowsep       %yesorno;                      #IMPLIED
+                    align        (left | right | center | 
+                                  justify | char)               #IMPLIED
+                    charoff      NUTOKEN                        #IMPLIED
+                    char         CDATA                          #IMPLIED>
+
+<!-- SPECIAL CHARACTERS -->
+<!ENTITY % ISOlat1 PUBLIC "ISO 8879:1986//ENTITIES Added Latin 1//EN" > 
+%ISOlat1; 
+
+<!ENTITY % ISOnum PUBLIC "ISO 8879:1986//ENTITIES Numeric and Special 
+Graphic//EN" > 
+%ISOnum; 
+      
+<!ENTITY % ISOgrk3 PUBLIC "ISO 8879:1986//ENTITIES Greek Symbols//EN" > 
+%ISOgrk3; 
+<!-- END OF SPECIAL CHARACTERS -->
+
+<!-- TIFF NOTATION DECLARATION -->
+<!NOTATION tiff SYSTEM>
+
+<!-- IGES NOTATION DECLARATION -->
+<!NOTATION iges SYSTEM>
+
+<!-- CGM NOTATION DECLARATION -->
+<!NOTATION cgm SYSTEM>
