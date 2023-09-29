@@ -1,2 +1,2 @@
 # ml_study
-an early stage study project, involves SOIC, NKUST, NCCU. 0929
+an early stage study project, involves SOIC, NKUST, NCCU. 
