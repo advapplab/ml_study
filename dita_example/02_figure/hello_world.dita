@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_vm3_v3z_b">
+  <title>Hello World</title>
+  <body>
+
+
+<fig expanse="column">
+  <title>The Handshake</title>
+  <image href="images/1200px-Foto_Shiba_Inu_.jpg" placement="break">
+    <alt>The Handshake</alt>
+  </image>
+</fig>
+
+  </body>
+</topic>
