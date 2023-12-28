@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ENTITY % 冊屬性 "((機密屬性)|(冊次)|(版次))+">
+<!ENTITY % 冊標題 "((封面標題)|(手冊名稱)|(冊次_冊名))+">
+<!ENTITY % 單位屬性 "((文件編號)|(編撰單位)|(綜合單位)|(發行單位))+">
+<!ENTITY % 主段 "條列式段落">
+<!ENTITY % 段 "無編號段落">
+<!ENTITY % 主架構 "主段|段">
+<!ENTITY % 圖片 "(圖標題|插圖)+">
+
+
+<!ELEMENT SIB (封面|修訂版本資料|目錄|圖目錄|表目錄|內文)*>
+<!ELEMENT 封面 ((%冊屬性;)|(%冊標題;)|(%圖片;)|(%單位屬性;))+>
+<!ELEMENT 機密屬性 (#PCDATA)>
+<!ELEMENT 冊次 (#PCDATA)>
+<!ELEMENT 版次 (#PCDATA)>
+<!ELEMENT 封面標題 (#PCDATA)>
+<!ELEMENT 手冊名稱 (#PCDATA)>
+<!ELEMENT 冊次_冊名 (#PCDATA)>
+<!ELEMENT 插圖 (#PCDATA) > 
+<!ELEMENT 圖標題 (#PCDATA) > 
+<!ELEMENT 文件編號 (#PCDATA)>
+<!ELEMENT 編撰單位 (#PCDATA)>
+<!ELEMENT 綜合單位 (#PCDATA)>
+<!ELEMENT 發行單位 (#PCDATA)>
+
+<!ELEMENT 表格 (列+)>
+<!ELEMENT 列 (表格標題?,(行+|列+))>
+<!ELEMENT 行 (#PCDATA)>
+<!ELEMENT 表格標題 (#PCDATA|表格副標題)*>
+<!ELEMENT 表格副標題 (#PCDATA)>
+
+<!ELEMENT 修訂版本資料 (表格)*>
+
+<!ELEMENT 目錄 (目錄標|目錄章)*>
+<!ELEMENT 目錄章 (目錄章名|(%主段;)|目錄節)*>
+<!ELEMENT 目錄節 (#PCDATA)>
+<!ELEMENT 目錄標 (#PCDATA)>
+<!ELEMENT 目錄章名 (#PCDATA)>
+
+<!ELEMENT 圖目錄 (圖目錄標|圖目錄名)*>
+<!ELEMENT 圖目錄標 (#PCDATA)>
+<!ELEMENT 圖目錄名 (#PCDATA)>
+
+<!ELEMENT 表目錄 (表目錄標|表目錄名)*>
+<!ELEMENT 表目錄標 (#PCDATA)>
+<!ELEMENT 表目錄名 (#PCDATA)>
+
+<!ELEMENT 內文 (標題+)>
+<!ELEMENT 標題 (標題名|(%主段;)*|章*)>
+<!ELEMENT 章 (章名|(%主段;)|節)*>
+<!ELEMENT 節 (節名|(%主段;)|子節|(%圖片;)|表格)*>
+<!ELEMENT 子節 (子節名|(%主段;)|子子節|(%圖片;)|表格)*>
+<!ELEMENT 子子節 (子子節名|(%主段;)|子子子節|(%圖片;)|表格)*>
