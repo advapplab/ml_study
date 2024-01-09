@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<!-- <topic id="sample_topic" xml:lang="en-US"> by JP -->
+<topic id="sample_topic" xml:lang="zh-TW"> <!-- 暫時看不出效果 -->
+  <title>測試 Sample DITA Topic</title>
+  
+  <body>
+    <p>範例 This is a sample DITA topic demonstrating the basic structure.</p>
+    
+    <section>
+      <title>節 Section 1</title>
+      <p>內容 This is the content of section 1.</p>
+    </section>
+    
+    <section>
+      <title>節 Section 2</title>
+      <p>內容 This is the content of section 2.</p>
+      
+      <subsection>
+        <title>小節 Subsection 2.1</title>
+        <p>內容 This is the content of subsection 2.1.</p>
+      </subsection>
+      
+      <subsection>
+        <title>小節 Subsection 2.2</title>
+        <p>內容 This is the content of subsection 2.2.</p>
+      </subsection>
+    </section>
+  </body>
+</topic>
