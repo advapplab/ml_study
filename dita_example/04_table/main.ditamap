@@ -4,5 +4,6 @@
  <title>DITA Topic Map</title>
 
  <topicref href="figure.dita"/>
- <topicref href="table.dita"/>
+ <topicref href="table01.dita"/>
+ <topicref href="table02.dita"/>
 </map>
