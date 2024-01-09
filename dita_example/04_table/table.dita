@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_vm3_v3z_b">
+  <title>Table Example</title>
+  <body>
+
+
+ <table>
+  <title>Table title</title>
+  <tgroup cols="2">
+   <thead>
+    <row>
+     <entry>Button</entry>
+     <entry>Description</entry>
+    </row>
+   </thead>
+   <tbody>
+    <row>
+     <entry>Print</entry>
+     <entry>Prints the document.</entry>
+    </row>
+
+    <row>
+     <entry>Open</entry>
+     <entry>Opens the file.</entry>
+    </row>
+   </tbody>
+  </tgroup>
+ </table>
+
+
+
+  </body>
+</topic>
