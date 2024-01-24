@@ -27,3 +27,10 @@ MAC installation: https://www.dita-ot.org/4.1/topics/installing-via-homebrew
 /opt/homebrew/bin/dita --input=main.ditamap --format=pdf
 ```
 
+### 05. i18N
+
+https://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/xmllang.html
+
+```sh
+/opt/homebrew/bin/dita --input=main.ditamap --format=pdf
+```

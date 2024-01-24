@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_vm3_v3z_b">
+  <title>Language</title>
+  <body>
+
+  <section>
+   <title>Before you begin</title>
+   <p>Special notes when installing Acme in France:</p>
+   <note conref="i18n_message.dita#topic_warnings/frenchwarnings"></note>
+  </section>
+
+  <section>
+   <title>Before you begin</title>
+   <p>Special notes when installing Acme in France:</p>
+   <note conref="i18n_message.dita#topic_warnings/englishwarnings"></note>
+  </section>
+
+  </body>
+</topic>

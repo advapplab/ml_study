@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>DITA Topic Map</title>
+
+ <topicref href="figure.dita"/>
+ <topicref href="table01.dita"/>
+ <topicref href="table02.dita"/>
+ <topicref href="i18n.dita"/>
+
+
+ <topicref href="sample.json" format="json" />
+</map>
