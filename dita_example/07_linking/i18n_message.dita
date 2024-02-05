@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_warnings">
+ <title>Warnings</title>
+ <body>
+
+  <section id="qqwwee" xml:lang="fr">
+   <title>French warnings</title>
+   <p>These are our French warnings.</p>
+   <note id="frenchwarnings">AVERTISSEMENT : Tenir hors de portée des enfants. Ce produit peut contenir des substances chimiques connues pour présenter des risques pour la santé. Lisez attentivement l'étiquette avant utilisation.
+</note>
+  </section>
+
+  <section xml:lang="en">
+   <title>English warnings</title>
+   <p>These are our English warnings.</p>
+   <note id="englishwarnings">WARNING: Keep out of reach of children. This product may contain chemicals known to cause health risks. Read the label carefully before use. 
+</note>
+  </section>
+
+ </body>
+</topic>
