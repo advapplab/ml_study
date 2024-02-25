@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="forms">
+  <title>Forms and Templates</title>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm end="acct">accounting</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body>
+    <p>This topic contains forms and templates used in company procedures.</p>
+  </body>
+</topic>
+
