@@ -34,3 +34,20 @@ https://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/xmllang.html
 ```sh
 /opt/homebrew/bin/dita --input=main.ditamap --format=pdf
 ```
+
+### 07. Linking
+
+```sh
+\dita\dita-ot-4.1.2\dita-ot-4.1.2\bin\dita.bat --input=main.ditamap --format=pdf
+```
+
+### 08. index
+
+```sh
+\dita\dita-ot-4.1.2\dita-ot-4.1.2\bin\dita.bat --input=rootmap.ditamap --format=pdf
+```
+### 09. index
+
+```sh
+\dita\dita-ot-4.1.2\dita-ot-4.1.2\bin\dita.bat --input=hierarchy.ditamap --format=pdf
+```
