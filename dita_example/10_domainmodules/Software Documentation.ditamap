@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map xml:lang="en" id="softwareDocumentation">
+  <title>Software Documentation</title>
+  <topicref href="percent_done_bar.dita">
+    <topicmeta>
+      <navtitle>Percent Done Bar</navtitle>
+      <shortdesc>A guide on how to implement and use a percent done bar in your UI.</shortdesc>
+    </topicmeta>
+  </topicref>
+</map>

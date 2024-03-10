@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map title="product features">
+  <!-- overview -->
+  <topicref href="overview.dita" format="dita" navtitle="overview"/>
+
+  <!-- features -->
+  <topicref href="features.dita" format="dita" navtitle="features">
+    <topicref href="feature1.dita" format="dita" navtitle="feature1"/>
+    <topicref href="feature2.dita" format="dita" navtitle="feature2" audience="advanced"/>
+    <topicref href="feature3.dita" format="dita" navtitle="feature3" audience="basic"/>
+  </topicref>
+
+  <!-- advanced topic -->
+  <topicref href="advanced_topics.dita" format="dita" navtitle="advanced_topics" audience="advanced"/>
+</map>

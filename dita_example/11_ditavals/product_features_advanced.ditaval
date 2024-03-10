@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<val>
+  <!-- 過濾設定，只包含針對進階使用者的內容 -->
+  <prop action="include" att="audience" val="advanced"/>
+  <!-- 排除基礎使用者的內容 -->
+  <prop action="exclude" att="audience" val="basic"/>
+</val>
