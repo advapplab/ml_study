@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map title="MagicPhone User Guide">
+
+  <!-- MagicPhone 15 Topics -->
+  <topicref href="dynamic_island.dita" format="dita" navtitle="Dynamic Island" product="MagicPhone 15"/>
+  <topicref href="color.dita" format="dita" navtitle="Color and Durability" product="MagicPhone 15"/>
+  <topicref href="camera.dita" format="dita" navtitle="4800 MP Main Camera" product="MagicPhone 15"/>
+  
+  <!-- MagicPhone 15 Pro Topics -->
+  <topicref href="Titanium_pro.dita" format="dita" navtitle="Titanium Build" product="MagicPhone 15 Pro"/>
+  <topicref href="camera_pro.dita" format="dita" navtitle="Advanced 4800 MP Camera" product="MagicPhone 15 Pro"/>
+  <topicref href="button.dita" format="dita" navtitle="Action Button" product="MagicPhone 15 Pro"/>
+  <topicref href="optical_zoom.dita" format="dita" navtitle="120mm Optical Zoom" product="MagicPhone 15 Pro"/>
+
+  <!-- Shared Topics -->
+  <topicref href="emergency.dita" format="dita" navtitle="Emergency SOS"/>
+  <topicref href="IOS17.dita" format="dita" navtitle="iOS 17 Features"/>
+
+</map>

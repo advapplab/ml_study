@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="dynamic_island" product="MagicPhone 15">
+    <title>動態島</title>
+    <shortdesc>「動態島」會以醒目的方式，浮現各種提示和「即時動態」。</shortdesc>
+    <refbody>
+        <refsyn>
+            <p>「動態島」會以醒目的方式，浮現各種提示和「即時動態」，即使忙著處理其他事，也不會錯過重要消息。你可以掌握叫車進度、看看是誰來電、追蹤航班狀態，事事一目瞭然。</p>
+            <fig>
+                <title>動態島</title>
+                <image href="images/2.png" width="300px" height="200px"/>
+            </fig>
+        </refsyn>
+    </refbody>
+</topic>

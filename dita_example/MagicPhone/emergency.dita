@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="emergency">
+    <title>緊急事故發生時，有 MagicPhone 做你的後盾。</title>
+    <shortdesc>MagicPhone 能偵測嚴重車禍，並在你無法求救時為你撥打求救電話。</shortdesc>
+    <refbody>
+        <refsyn>
+            <p>MagicPhone 能偵測嚴重車禍，並在你無法求救時為你撥打求救電話。硬體感測器和先進移動演算法可辨識車禍的各種跡象，包括速度和方向的突然變化，或者安全氣囊爆開時所造成的車廂氣壓變化。MagicPhone 還可以撥打緊急服務，並通知你的緊急聯絡人。</p>
+            <p>超過 100 萬小時的真實駕駛與車禍數據，有助於 iPhone 辨識車禍事故。</p>
+        </refsyn>
+    </refbody>
+</topic>

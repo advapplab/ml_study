@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<val>
+  <!-- 只包含MagicPhone 15的内容 -->
+  <prop action="include" att="product" val="MagicPhone 15"/>
+  <!-- 排除MagicPhone 15 Pro的内容 -->
+  <prop action="exclude" att="product" val="MagicPhone 15 Pro"/>
+</val>

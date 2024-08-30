@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ios17">
+    <title>iOS 17，秀風格，交換聯絡方式，玩貼圖。</title>
+    <shortdesc>聯絡人海報和 NameDrop 讓你更輕鬆的交換聯絡資訊。</shortdesc>
+    <refbody>
+        <refsyn>
+            <p>聯絡人海報。製作你的個人海報，在你撥打電話時，對方一眼就看到。挑選心愛的照片或 Memoji，再配上喜歡的字型，你的專屬名片就完成了。</p>
+            <p>NameDrop。想和別人交換聯絡資訊時，只要將彼此的 iPhone 互相靠近，各自選擇要分享的內容，資訊就會立即傳送給對方。</p>
+            <p>原況貼圖。按住照片中的主體，再把主體從背景中移開，即可製作貼圖。還可添加「立體」和「閃耀」等有趣的效果，也可以利用「原況照片」製作動畫貼圖。</p>
+            <fig>
+                <title>iOS 17 功能</title>
+                <image href="images/6.png" width="300px" height="200px"/>
+            </fig>
+        </refsyn>
+    </refbody>
+</topic>

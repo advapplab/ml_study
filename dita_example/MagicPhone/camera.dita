@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="camera" product="MagicPhone 15">
+    <title>全新 4800 萬像素主相機</title>
+    <shortdesc>主相機現在能拍超高解析度照片。</shortdesc>
+    <refbody>
+        <refsyn>
+            <p>主相機現在能拍超高解析度照片。無論隨手抓拍，或捕捉壯麗風景，拍出細節豐富、搶眼吸睛的大作，都比以前更輕鬆容易。</p>
+            <fig>
+                <title>相機性能</title>
+                <image href="images/4.png" width="300px" height="200px"/>
+            </fig>
+            <note>最高可達4 倍解析度捕捉絕佳細節。</note>
+        </refsyn>
+    </refbody>
+</topic>

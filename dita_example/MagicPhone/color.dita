@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="color" product="MagicPhone 15">
+    <title>色彩徹底融入，堅固全面包覆。</title>
+    <shortdesc>滿滿創新的全新設計，將色彩融入整個機背玻璃材質。</shortdesc>
+    <refbody>
+        <refsyn>
+            <p>滿滿創新的全新設計，將色彩融入整個機背玻璃材質。特製的雙離子交換製程強化玻璃，加上航太等級鋁金屬機身邊框，成就了 MagicPhone 15 的超經久耐用。</p>
+            <fig>
+                <title>色彩與設計</title>
+                <image href="images/3.png" width="300px" height="200px"/>
+            </fig>
+            <table>
+                <tgroup cols="2">
+                    <colspec colname="col1"/>
+                    <colspec colname="col2"/>
+                    <tbody>
+                        <row>
+                            <entry>經久耐用，靠得住。</entry>
+                            <entry>超瓷晶盾面板，比其他智慧型手機的玻璃更堅固。</entry>
+                        </row>
+                        <row>
+                            <entry>防塵抗水，一把罩。</entry>
+                            <entry>ＭagicPhone 防潑、抗水又防塵，大可放心使用。</entry>
+                        </row>
+                        <row>
+                            <entry>堅固，夠強悍。</entry>
+                            <entry>航太等級鋁金屬機身，超堅固又輕盈。</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </refsyn>
+    </refbody>
+</topic>
